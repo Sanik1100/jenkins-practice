@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('Welcome'){
 			steps{
-				echo 'Hello from my Jenkinsfile!'
+				echo 'Hello from my latest updated second time Jenkinsfile!'
 			}
 			}
 		stage('Build'){
