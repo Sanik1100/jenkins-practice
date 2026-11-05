@@ -10,7 +10,7 @@ pipeline{
 		stage('Build Docker Image'){
 			steps{
 				sh '''
-				docker build -t  my-first-jenkins-image:1.0 .
+				docker build -t  my-first-jenkins-image:$BUILD_NUMBER .
 				'''
 				}
 				}
@@ -18,7 +18,7 @@ pipeline{
 			steps{
 				sh '''
 				echo "Testing Docker image..."
-				docker run --rm my-first-jenkins-image:1.0
+				docker run --rm my-first-jenkins-image:$BUILD_NUMBER
 				'''
 				}
 				}
