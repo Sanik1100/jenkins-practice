@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('Welcome'){
 			steps{
-				echo 'Hello from my Automatic build Jenkinsfile!'
+				echo 'Hello from my Github account webhook1!'
 			}
 			}
 		stage('Build'){
