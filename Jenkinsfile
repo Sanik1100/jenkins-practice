@@ -14,9 +14,17 @@ pipeline{
 				'''
 				}
 				}
+		stage('Test Docker Image'){
+			steps{
+				sh '''
+				echo "Testing Docker image..."
+				docker run --rm my-first-jenkins-image:1.0
+				'''
+				}
+				}
 		stage('Finish'){
 			steps{
-				echo 'Docker image built successfully!'
+				echo 'Docker image built and test successfully!'
 				}
 				}
 				}
